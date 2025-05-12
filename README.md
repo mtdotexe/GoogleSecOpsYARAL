@@ -10,6 +10,7 @@ Each rule is grouped by log field and tier scope, aligned with SOC Analyst Tier 
 
 ```
 yaral-rule-pack/
+├── yaraL_tier1_learning_path
 ├── tier1-example-rules/
 │   ├── file_name_rules.yar
 │   ├── dns_rules.yar
@@ -21,6 +22,7 @@ yaral-rule-pack/
 │   ├── final_challange.yar
 │   ├── final_challange_obj.txt
 │
+├── yaraL_tier2_learning_path.md
 ├── tier2-example-rules/
 │   ├── cloud_api_rules.yar
 │   ├── multi_event_chain_rules.yar
@@ -28,6 +30,10 @@ yaral-rule-pack/
 │   ├── timestamp_logic_rules.yar
 │   ├── dns_hex_combo_rules.yar
 │   ├── final_challange.yar
+├── yaral_cheatsheet.md
+│
+Tier3_Upcoming_Learning_Path/
+│   ├── yaral_tier3_upcoming_learning_path.md
 ```
 
 ---
