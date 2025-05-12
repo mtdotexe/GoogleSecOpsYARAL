@@ -1,0 +1,41 @@
+Write a YARA-L rule to detect the following suspicious multi-vector activity:
+
+
+File Name:
+A file is dropped with a name that starts with agent_ or ends with .injector.exe, .dropper.exe, or .stage1.exe
+
+HTTP URI:
+URI path ends with .php or .exe and contains either /sync or /task
+But should not contain /safe or /test
+
+User-Agent:
+Starts with python or AutoFetcher, or ends with /3.1
+But not if it contains Mozilla, Chrome, or Edge
+
+DNS Query:
+Matches domains ending in .xyz, .top, or .info
+But not if it begins with cdn., static., or safe.
+
+IP Destination:
+Matches either 203.0.113.11 or 198.51.100.7
+
+User Email:
+Starts with admin@, support@, or ends with @protonmail.com, @secure-mail.org
+Designed to catch phishing attempts or abuse of trusted-looking senders
+
+Hex Pattern:
+Must match: { 60 BE ?? ?? ?? ?? 8B 06 FF 50 08 }
+
+File SHA-256 hash:
+Should match a known hash:
+e99a18c428cb38d5f260853678922e03abd8335c8490d7317d6d7f2342a33bc4
+
+
+Bonus Techniques to Apply:
+
+Use matches (regex) for file.name, URI, UA, DNS, email
+Use contains only where necessary (e.g., /task)
+Apply regex anchors (^, $) in UA, DNS, email
+Apply piping | and grouping () for clarity
+Use logical chaining and proper parentheses to avoid operator mistakes
+Maintain clean structure and comment the rule properly
