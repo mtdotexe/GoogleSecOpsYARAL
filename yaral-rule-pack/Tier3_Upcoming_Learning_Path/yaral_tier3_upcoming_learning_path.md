@@ -85,7 +85,7 @@ This roadmap outlines the planned progression for mastering Tier 3 detection eng
 
 ## Phase 6: SaaS / Cloud-Specific Activities
 
-**Objective:** Monitor cloud-native behavior in Google Workspace or SaaS activity logs.
+**Objective:** Monitor cloud-native behavior in (eg.Google Workspace, Okta, Azuer AD, etc) or SaaS activity logs.
 
 **Planned Fields:**
 - `activity.name`
